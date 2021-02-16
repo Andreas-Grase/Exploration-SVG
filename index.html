@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Criando animação com as propriedades de stroke</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section>
+        <article>
+            <h2>Loading</h2>
+            <svg class="loader" width='200' height='200' viewBox='0 0 40 60'>
+                <polygon class='triangle' fill='none' stroke='#000' stroke-width='1' points='16,1 32,32 1,32' />
+                <text class='loading' x='0' y='45' fill="#000">Working...</text>
+            </svg>
+        </article>
+        <article>
+            <h2>Planet</h2>
+            <svg class="planet" viewBox="0 0 160 160" width="160" height="160">
+                <circle cx="80" cy="80" r="50" fill="#000" />
+                <g transform=" matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
+                    <path d="M 0,70 A 65,70 0 0,0 65,0 5,5 0 0,1 75,0 75,70 0 0,1 0,70Z" fill="#AAA">
+                        <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="1s"
+                            repeatCount="indefinite" />
+                    </path>
+                </g>
+                <path d="M 50,0 A 50,50 0 0,0 -50,0Z" transform="matrix(0.866, -0.5, 0.5, 0.866, 80, 80)" />
+            </svg>
+        </article>
+        <article>
+            <h2>Button</h2>
+            <svg class="button" width="84.5" height="28" role="img" aria-label="HTML5">
+                <title>HTML5</title>
+                <!-- Quadrado -->
+                <g shape-rendering="crispEdges">
+                    <rect width="0" height="28" fill="#555" />
+                    <rect x="0" width="84.5" height="28" fill="#e34f26" />
+                </g>
+                <!-- Conteúdo -->
+                <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+                    text-rendering="geometricPrecision" font-size="100">
+                    <image x="9" y="7" width="14" height="14"
+                        xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlPkhUTUw1IGljb248L3RpdGxlPjxwYXRoIGQ9Ik0xLjUgMGgyMWwtMS45MSAyMS41NjNMMTEuOTc3IDI0bC04LjU2NC0yLjQzOEwxLjUgMHptNy4wMzEgOS43NWwtLjIzMi0yLjcxOCAxMC4wNTkuMDAzLjIzLTIuNjIyTDUuNDEyIDQuNDFsLjY5OCA4LjAxaDkuMTI2bC0uMzI2IDMuNDI2LTIuOTEuODA0LTIuOTU1LS44MS0uMTg4LTIuMTFINi4yNDhsLjMzIDQuMTcxTDEyIDE5LjM1MWw1LjM3OS0xLjQ0My43NDQtOC4xNTdIOC41MzF6Ii8+PC9zdmc+" />
+                    <text fill="#fff" x="512.5" y="175" font-weight="bold" transform="scale(.1)"
+                        textLength="425">HTML5</text>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73" height="28"
+                role="img" aria-label="CSS3">
+                <title>CSS3</title>
+                <g shape-rendering="crispEdges">
+                    <rect width="0" height="28" fill="#555" />
+                    <rect x="0" width="73" height="28" fill="#1572b6" />
+                </g>
+                <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+                    text-rendering="geometricPrecision" font-size="100">
+                    <image x="9" y="7" width="14" height="14"
+                        xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlPkNTUzMgaWNvbjwvdGl0bGU+PHBhdGggZD0iTTEuNSAwaDIxbC0xLjkxIDIxLjU2M0wxMS45NzcgMjRsLTguNTY1LTIuNDM4TDEuNSAwem0xNy4wOSA0LjQxM0w1LjQxIDQuNDFsLjIxMyAyLjYyMiAxMC4xMjUuMDAyLS4yNTUgMi43MTZoLTYuNjRsLjI0IDIuNTczaDYuMTgybC0uMzY2IDMuNTIzLTIuOTEuODA0LTIuOTU2LS44MS0uMTg4LTIuMTFoLTIuNjFsLjI5IDMuODU1TDEyIDE5LjI4OGw1LjM3My0xLjUzTDE4LjU5IDQuNDE0eiIvPjwvc3ZnPg==" />
+                    <text fill="#fff" x="455" y="175" font-weight="bold" transform="scale(.1)"
+                        textLength="310">CSS3</text>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124" height="28"
+                role="img" aria-label="JAVASCRIPT">
+                <title>JAVASCRIPT</title>
+                <g shape-rendering="crispEdges">
+                    <rect width="0" height="28" fill="#555" />
+                    <rect x="0" width="124" height="28" fill="#f7df1e" />
+                </g>
+                <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+                    text-rendering="geometricPrecision" font-size="100">
+                    <image x="9" y="7" width="14" height="14"
+                        xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlPkphdmFTY3JpcHQgaWNvbjwvdGl0bGU+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6bTIyLjAzNCAxOC4yNzZjLS4xNzUtMS4wOTUtLjg4OC0yLjAxNS0zLjAwMy0yLjg3My0uNzM2LS4zNDUtMS41NTQtLjU4NS0xLjc5Ny0xLjE0LS4wOTEtLjMzLS4xMDUtLjUxLS4wNDYtLjcwNS4xNS0uNjQ2LjkxNS0uODQgMS41MTUtLjY2LjM5LjEyLjc1LjQyLjk3Ni45IDEuMDM0LS42NzYgMS4wMzQtLjY3NiAxLjc1NS0xLjEyNS0uMjctLjQyLS40MDQtLjYwMS0uNTg2LS43OC0uNjMtLjcwNS0xLjQ2OS0xLjA2NS0yLjgzNC0xLjAzNGwtLjcwNS4wODljLS42NzYuMTY1LTEuMzIuNTI1LTEuNzEgMS4wMDUtMS4xNCAxLjI5MS0uODExIDMuNTQxLjU2OSA0LjQ3MSAxLjM2NSAxLjAyIDMuMzYxIDEuMjQ0IDMuNjE2IDIuMjA1LjI0IDEuMTctLjg3IDEuNTQ1LTEuOTY2IDEuNDEtLjgxMS0uMTgtMS4yNi0uNTg2LTEuNzU1LTEuMzM2bC0xLjgzIDEuMDUxYy4yMS40OC40NS42ODkuODEgMS4xMDkgMS43NCAxLjc1NiA2LjA5IDEuNjY2IDYuODcxLTEuMDA0LjAyOS0uMDkuMjQtLjcwNS4wNzQtMS42NWwuMDQ2LjA2N3ptLTguOTgzLTcuMjQ1aC0yLjI0OGMwIDEuOTM4LS4wMDkgMy44NjQtLjAwOSA1LjgwNSAwIDEuMjMyLjA2MyAyLjM2My0uMTM4IDIuNzExLS4zMy42ODktMS4xOC42MDEtMS41NjYuNDgtLjM5Ni0uMTk2LS41OTctLjQ2Ni0uODMtLjg1NS0uMDYzLS4xMDUtLjExLS4xOTYtLjEyNy0uMTk2bC0xLjgyNSAxLjEyNWMuMzA1LjYzLjc1IDEuMTcyIDEuMzI0IDEuNTE3Ljg1NS41MSAyLjAwNC42NzUgMy4yMDcuNDA1Ljc4My0uMjI2IDEuNDU4LS42OTEgMS44MTEtMS40MTEuNTEtLjkzLjQwMi0yLjA3LjM5Ny0zLjM0Ni4wMTItMi4wNTQgMC00LjEwOSAwLTYuMTc5bC4wMDQtLjA1NnoiLz48L3N2Zz4=" />
+                    <text fill="#333" x="710" y="175" font-weight="bold" transform="scale(.1)"
+                        textLength="820">JAVASCRIPT</text>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107" height="28"
+                role="img" aria-label="LINKEDIN">
+                <title>LINKEDIN</title>
+                <g shape-rendering="crispEdges">
+                    <rect width="0" height="28" fill="#555" />
+                    <rect x="0" width="107" height="28" fill="#0077b5" />
+                </g>
+                <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+                    text-rendering="geometricPrecision" font-size="100">
+                    <image x="9" y="7" width="14" height="14"
+                        xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlPkxpbmtlZEluIGljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2MtMS4xNDQgMC0yLjA2My0uOTI2LTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjIgMGguMDAzeiIvPjwvc3ZnPg==" />
+                    <text fill="#fff" x="625" y="175" font-weight="bold" transform="scale(.1)"
+                        textLength="650">LINKEDIN</text>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="82.5" height="28"
+                role="img" aria-label="GMAIL">
+                <title>GMAIL</title>
+                <g shape-rendering="crispEdges">
+                    <rect width="0" height="28" fill="#555" />
+                    <rect x="0" width="82.5" height="28" fill="#d14836" />
+                </g>
+                <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+                    text-rendering="geometricPrecision" font-size="100">
+                    <image x="9" y="7" width="14" height="14"
+                        xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlPkdtYWlsIGljb248L3RpdGxlPjxwYXRoIGQ9Ik0yNCA1LjQ1N3YxMy45MDljMCAuOTA0LS43MzIgMS42MzYtMS42MzYgMS42MzZoLTMuODE5VjExLjczTDEyIDE2LjY0bC02LjU0NS00LjkxdjkuMjczSDEuNjM2QTEuNjM2IDEuNjM2IDAgMCAxIDAgMTkuMzY2VjUuNDU3YzAtMi4wMjMgMi4zMDktMy4xNzggMy45MjctMS45NjRMNS40NTUgNC42NCAxMiA5LjU0OGw2LjU0NS00LjkxIDEuNTI4LTEuMTQ1QzIxLjY5IDIuMjggMjQgMy40MzQgMjQgNS40NTd6Ii8+PC9zdmc+" />
+                    <text fill="#fff" x="502.5" y="175" font-weight="bold" transform="scale(.1)"
+                        textLength="405">GMAIL</text>
+                </g>
+            </svg>
+        </article>
+        <arcticle>
+            <h2>Banner</h2>
+            <svg class="banner" width='1280' height='320' viewBox='0 0 1280 320'>
+                <g>
+                    <!-- bola -->
+                    <circle cx="579.8509" cy="172.13775" fill="#F9BA48" id="svg_3" r="41.15453" />
+                    <!-- contorno -->
+                    <path
+                        d="m698.29745,78.90921l-31.2867,31.29414l35.85455,-57.05423l-4.32694,-3.86047l-20.09262,16.07692l6.86087,-12.35513l-3.97687,-4.01044l-129.33196,70.56461c-18.79272,10.13247 -30.93977,30.76765 -30.93977,52.57315c0,32.42617 26.37443,58.80625 58.79227,58.80625c20.46277,0 39.12061,-10.41485 49.9207,-27.87732l73.11502,-120.55303l-4.58855,-3.60444zm-73.53786,121.08516c-9.70973,15.69853 -26.49802,25.0692 -44.90868,25.0692c-29.17562,0 -52.91323,-23.74326 -52.91323,-52.92581c0,-19.67069 10.93247,-38.27712 27.86442,-47.40369l120.44282,-65.71079l-8.90419,16.03111l-41.29318,33.04051l3.67448,4.59278l41.66018,-33.33732l0.22648,0.12613l0.30553,-0.55284l17.71428,-14.17555l-55.41768,88.18333l4.97689,3.12879l14.7481,-23.46966l32.28296,-32.29063l-60.45918,99.69445z"
+                        fill="#333333" />
+                    <!-- detalhe da cauda -->    
+                    <rect fill="#333333" height="9.371" 
+                        transform="matrix(0.537903 -0.322919 0.322842 0.538031 168.289 166.44)" width="27.32"
+                        x="638.17373" y="279.66648" />
+                    <!-- detalhe da bola -->    
+                    <path
+                        d="m556.33412,172.13775l-5.87904,0c0,16.21309 13.18722,29.40344 29.39645,29.40344l0,-5.88044c-12.96701,0 -23.51741,-10.55291 -23.51741,-23.523z"
+                        fill="#333333" />
+                </g>
+            </svg>
+        </arcticle>
+    </section>
+
+</body>
+
+</html>
